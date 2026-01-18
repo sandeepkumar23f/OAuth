@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import Login from './components/auth/Login'
-import Temp from './components/auth/Temp'
 import SignUp from './components/auth/SignUp'
+import {Routes,Route} from "react-router-dom"
+import Dashboard from './components/dashboard/Dashboard'
 function App() {
   return (
-    <>
-    {/* <Temp/> */}
-    {/* <Login/> */}
-    <SignUp/>
-    </>
+    <Routes>
+      <Route path='/' element={<Login/>}/>
+      <Route path='/signup' element={<SignUp/>}/>
+      <Route path='dashboard' element={<Dashboard/>}/>
+    </Routes>
   )
 }
 
